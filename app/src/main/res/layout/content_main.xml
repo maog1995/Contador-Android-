@@ -4,17 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="xyz.maog.contador.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/TVcontador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="145dp"
+        android:layout_marginTop="32dp"
+        android:text="Contador:"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/BTNreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="217dp"
+        android:layout_marginEnd="129dp"
+        android:text="Resetear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BTNsuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Suma"
+        app:layout_constraintBottom_toTopOf="@+id/BTNreset"
+        app:layout_constraintStart_toStartOf="@+id/BTNreset" />
+
+    <Button
+        android:id="@+id/BTNresta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Resta"
+        app:layout_constraintStart_toStartOf="@+id/BTNreset"
+        app:layout_constraintTop_toBottomOf="@+id/BTNreset" />
 </android.support.constraint.ConstraintLayout>
