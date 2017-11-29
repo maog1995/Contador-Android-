@@ -35,26 +35,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
+        android:gravity="center_vertical|center"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp">
 
         <Button
             android:id="@+id/BTNresta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="restaContador"
-            android:text="Resta" />
+            android:text="-"
+            android:textSize="50dp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="50dp"
+            android:layout_height="0dp" />
 
         <Button
             android:id="@+id/BTNsuma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="sumaContador"
-            android:text="Suma" />
+            android:text="+"
+            android:textSize="50dp" />
     </LinearLayout>
 
     <LinearLayout
