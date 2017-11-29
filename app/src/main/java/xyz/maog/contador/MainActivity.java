@@ -36,9 +36,9 @@ public class MainActivity extends Activity {
     }
 
     public void mostrarResultado() {
-        TextView textoResultado = (TextView) findViewById(R.id.TVcontador);
+        TextView textoResultado = (TextView) findViewById(R.id.TVcontadorN);
 
-        textoResultado.setText("Contador: " + contador);
+        textoResultado.setText("" + contador);
     }
 
 }

@@ -9,44 +9,69 @@
     tools:context="xyz.maog.contador.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/TVcontador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="145dp"
-        android:layout_marginTop="32dp"
-        android:text="Contador:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
-    <Button
-        android:id="@+id/BTNreset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="217dp"
-        android:layout_marginEnd="129dp"
-        android:onClick="reseteaContador"
-        android:text="Resetear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/TVcontadorT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contador:"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/BTNsuma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:onClick="sumaContador"
-        android:text="Suma"
-        app:layout_constraintBottom_toTopOf="@+id/BTNreset"
-        app:layout_constraintStart_toStartOf="@+id/BTNreset" />
+        <TextView
+            android:id="@+id/TVcontadorN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/BTNresta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="restaContador"
-        android:text="Resta"
-        app:layout_constraintStart_toStartOf="@+id/BTNreset"
-        app:layout_constraintTop_toBottomOf="@+id/BTNreset" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/BTNresta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="restaContador"
+            android:text="Resta" />
+
+        <Button
+            android:id="@+id/BTNsuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="sumaContador"
+            android:text="Suma" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/BTNresetea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_light"
+            android:onClick="reseteaContador"
+            android:text="Resetear" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
